@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Flying Rocket</title>
+  </head>
+  <body>
+    <div class="space">
+      <div class="player-container">
+        <div class="player-ship">
+          <img class="rocket-img" src="enterprise.png" alt="" />
+          <div class="first-flame"></div>
+          <div class="second-flame"></div>
+        </div>
+
+        <div class="stats-container">
+          <div class="healthbar"></div>
+          <div class="stats-subcontainer">
+            <div class="stat accuracy">
+              <svg id="accuracy-svg" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="25"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                />
+                <circle cx="50" cy="50" r="5" fill="white" />
+              </svg>
+
+              <span class="stat-text">70</span>
+              <!-- <span class="stat-name">Accuracy</span> -->
+            </div>
+            <div class="stat firepower">
+              <svg id="accuracy-svg" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="25"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                />
+                <circle cx="50" cy="50" r="5" fill="white" />
+              </svg>
+              <span class="stat-text">6</span>
+            </div>
+            <div class="stat hull">
+              <svg id="accuracy-svg" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="10"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="25"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                />
+                <circle cx="50" cy="50" r="5" fill="white" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
