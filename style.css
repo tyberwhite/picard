@@ -80,26 +80,16 @@ body {
   width: 80px;
 }
 
-.phaser::before {
+/* .phaser::before {
   content: "";
   position: absolute;
-  bottom: 138px;
-  left: 39px;
-  width: 2px;
-  height: 800px;
-  background: linear-gradient(to top, var(--orange), transparent);
 }
 
 .phaser::after {
   content: "";
   position: absolute;
-  bottom: 138px;
-  left: 39px;
-  width: 2px;
-  height: 800px;
-  background: linear-gradient(to top, var(--orange), transparent);
   filter: blur(1px);
-}
+} */
 
 /* Create pseduo element for engine flame */
 .first-flame::before {
@@ -434,13 +424,13 @@ body {
 }
 
 /* Laser Beams */
-/* 
+
 .laser-beam {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  width: 3px;
-  height: 500%;
+  bottom: 120px;
+  width: 10px;
+  height: 800%;
   background: rgba(99, 195, 231, 0.6);
   -webkit-box-shadow: 0px 0px 15px 0px #63c3e7;
   -moz-box-shadow: 0px 0px 15px 0px #63c3e7;
@@ -450,7 +440,9 @@ body {
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-animation: laser 7s infinite;
+  z-index: -2;
 }
+
 .laser-beam.red {
   -webkit-animation: laser 7.5s infinite;
   background: rgba(236, 19, 65, 0.6);
@@ -466,7 +458,15 @@ body {
   box-shadow: 0px 0px 15px 0px #cc66ff;
 }
 .laser-beam.green {
-  -webkit-animation: laser 7.7s infinite;
+  -webkit-animation: laser 8s infinite;
+  background: rgba(86, 212, 69, 0.6);
+  -webkit-box-shadow: 0px 0px 25px 0px #56d445;
+  -moz-box-shadow: 0px 0px 25px 0px #56d445;
+  box-shadow: 0px 0px 25px 0px #56d445;
+}
+
+.laser-beam.green::after {
+  -webkit-animation: laser 1s infinite;
   background: rgba(86, 212, 69, 0.6);
   -webkit-box-shadow: 0px 0px 15px 0px #56d445;
   -moz-box-shadow: 0px 0px 15px 0px #56d445;
@@ -492,7 +492,7 @@ body {
     -webkit-transform: rotate(-75deg);
     transform: rotate(-75deg);
   }
-} */
+}
 
 .blob.red {
   background: var(--electricBlue);

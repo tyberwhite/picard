@@ -26,12 +26,11 @@ const createStars = () => {
     star.style.left = x + "px";
     star.style.width = "2px";
     star.style.height = height + "px";
-    star.style.color = "green";
 
-    slowStar.style.left = x + "px";
-    slowStar.style.top = x + "px";
-    slowStar.style.width = "2px";
-    slowStar.style.height = "2px";
+    // slowStar.style.left = x + "px";
+    // slowStar.style.top = x + "px";
+    // slowStar.style.width = "2px";
+    // slowStar.style.height = "2px";
 
     // Define how many seconds each animation takes to complete one cycle
     star.style.animationDuration = speed + "s";
@@ -133,4 +132,12 @@ const darkModeEl = document.querySelector(".dark-mode-btn");
 darkModeEl.addEventListener("click", function () {
   const space = document.querySelector(".space");
   space.classList.toggle("dark-mode");
+});
+
+// Retreat
+const retreatBtn = document.querySelector(".scan");
+retreatBtn.addEventListener("click", function () {
+  const phaser = document.querySelector(".phaser");
+  phaser.classList.toggle("laser-beam");
+  phaser.classList.toggle("green");
 });
