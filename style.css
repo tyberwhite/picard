@@ -214,6 +214,11 @@ body {
   margin-bottom: 4px;
   opacity: 90%;
 }
+
+.terminal {
+  border: 1px solid white;
+  height: 100px;
+}
 .stats-subcontainer {
   display: flex;
   opacity: 90%;
@@ -232,6 +237,7 @@ body {
 }
 
 .weapon {
+  background-color: #8ef9f449;
   display: flex;
   justify-content: space-between;
   border: 1px solid white;
@@ -245,6 +251,7 @@ body {
 }
 
 .weapon:active {
+  color: white;
   background-color: #8ef9f49e;
 }
 
