@@ -11,83 +11,34 @@
   <body>
     <div class="space">
       <div class="dark-mode-btn"></div>
+      <div class="alien-container">
+        <div class="alien-ship">
+          <img
+            class="alien-ship-img"
+            src="alien-ship.png"
+            alt="alien space ship"
+          />
+          <div class="alien-ship-flame"></div>
+        </div>
+      </div>
       <div class="player-container">
         <div class="player-ship">
           <img class="rocket-img" src="enterprise.png" alt="" />
-          <div class="phaser"></div>
+          <!-- <div class="phaser"></div> -->
           <div class="first-flame"></div>
           <div class="second-flame"></div>
         </div>
 
-        <div class="stats-container">
-          <div class="healthbar"></div>
+        <div class="weapons-container">
           <div class="stats-subcontainer">
-            <div class="stat accuracy">
-              <svg id="accuracy-svg" viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="10"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="25"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="6"
-                />
-                <circle cx="50" cy="50" r="5" fill="white" />
-              </svg>
-
-              <span class="stat-text">70</span>
-              <!-- <span class="stat-name">Accuracy</span> -->
+            <div class="weapon">
+              <span class="weapon-text">ATTACK</span>
             </div>
-            <div class="stat firepower">
-              <svg id="accuracy-svg" viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="10"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="25"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="6"
-                />
-                <circle cx="50" cy="50" r="5" fill="white" />
-              </svg>
-              <span class="stat-text">6</span>
+            <div class="weapon">
+              <span class="weapon-text">RETREAT</span>
             </div>
-            <div class="stat hull">
-              <svg id="accuracy-svg" viewBox="0 0 100 100">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="10"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="25"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="6"
-                />
-                <circle cx="50" cy="50" r="5" fill="white" />
-              </svg>
+            <div class="weapon">
+              <span class="weapon-text">QUIT</span>
             </div>
           </div>
         </div>

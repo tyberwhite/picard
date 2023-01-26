@@ -66,7 +66,7 @@ body {
   background: rgba(255, 255, 255, 0.5);
   animation: animateStars linear infinite;
 }
-.space .player-container {
+.player-container {
   position: relative;
   top: 20vh;
   animation: movePlayership 3s ease-in-out forwards;
@@ -75,7 +75,6 @@ body {
 
 .player-ship {
   animation: animateRocket 4s ease infinite;
-  top: 500px;
 }
 
 /* animateRocket 0.3s ease infinite, */
@@ -150,7 +149,20 @@ body {
   animation: pulseing 3s ease-in-out infinite;
 }
 
-.stats-container {
+/* Alien Ship */
+
+.alien-container {
+  position: absolute;
+  top: 10vh;
+  animation: moveAlienShip 3s ease-in-out forwards;
+  z-index: 3;
+}
+
+.alien-ship-img {
+  width: 70px;
+}
+
+.weapons-container {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -194,6 +206,28 @@ body {
 
 .stat-text {
   font-size: 1.2em;
+}
+
+.weapon {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid white;
+  padding: 0.3em 1em;
+  margin: 0;
+}
+
+.weapon:hover {
+  background-color: var(--electricBlue);
+  cursor: pointer;
+}
+
+.weapon:active {
+  background-color: #8ef9f49e;
+}
+
+.weapon-text {
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
 #accuracy-svg {
@@ -243,6 +277,16 @@ body {
   to {
     bottom: -15%;
     transform: translateY(-50%, -50%);
+  }
+}
+
+@keyframes moveAlienShip {
+  from {
+    top: -10vh;
+  }
+  to {
+    top: 15vh;
+    transform: translateY(50%, 50%);
   }
 }
 
@@ -500,6 +544,7 @@ body {
 
 .dark-mode-btn:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 .dark-mode-btn:active {
