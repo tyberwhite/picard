@@ -57,7 +57,6 @@ body {
   background-color: #1c275e;
   background-image: var(--gradient1);
   overflow: hidden;
-  transition: background 5s ease;
 }
 
 .space i {
@@ -69,15 +68,13 @@ body {
 .player-container {
   position: relative;
   top: 20vh;
-  animation: movePlayership 3s ease-in-out forwards;
-  z-index: 3;
+  animation: movePlayerShip 3s ease-in-out forwards;
+  z-index: 4;
 }
 
 .player-ship {
   animation: animateRocket 4s ease-in-out infinite;
 }
-
-/* animateRocket 0.3s ease infinite, */
 
 .rocket-img {
   width: 80px;
@@ -113,8 +110,6 @@ body {
   width: 7px;
   height: 175px;
   background: linear-gradient(to bottom, var(--electricBlue), transparent);
-  /* animation: pulseColor 0.005s infinite; */
-  /* animation: pulse-red 2s infinite; */
 }
 
 .first-flame::after {
@@ -153,13 +148,15 @@ body {
 
 .alien-container {
   position: absolute;
+  display: flex;
   top: 10vh;
-  animation: moveAlienShip 3s ease-in-out forwards;
+  animation: moveAlienShip 5s ease-in-out forwards;
   z-index: 3;
 }
 
 .alien-ship {
-  animation: animateAlienShip 4s ease-in-out infinite;
+  animation: animateAlienShip 3s ease-in-out infinite;
+  margin: 0 2em;
 }
 
 .alien-ship-img {
@@ -175,8 +172,6 @@ body {
   width: 5px;
   height: 80px;
   background: linear-gradient(to top, var(--orange), transparent);
-  /* animation: pulseColor 0.005s infinite; */
-  /* animation: pulse-red 2s infinite; */
 }
 
 .alien-ship-flame::after {
@@ -312,19 +307,19 @@ body {
   }
 }
 
-@keyframes movePlayership {
+@keyframes movePlayerShip {
   from {
-    bottom: -600px;
+    top: 70vh;
   }
   to {
-    bottom: -15%;
+    top: 20vh;
     transform: translateY(-50%, -50%);
   }
 }
 
 @keyframes moveAlienShip {
   from {
-    top: -10vh;
+    top: -20vh;
   }
   to {
     top: 15vh;
@@ -508,8 +503,7 @@ body {
 }
 
 .astronaut {
-  width: 50px;
-  /* animation: move-right 60s linear infinite, rotateAstronaut 10s linear infinite; */
+  width: 40px;
   animation: rotateAstronaut 30s linear infinite;
 }
 
