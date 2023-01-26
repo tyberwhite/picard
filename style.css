@@ -155,12 +155,12 @@ body {
 }
 
 .alien-ship {
-  animation: animateAlienShip 3s ease-in-out infinite;
+  animation: animateAlienShip 2s ease-in-out infinite;
   margin: 0 2em;
 }
 
 .alien-ship-img {
-  width: 70px;
+  width: 50px;
 }
 
 /* Create pseduo element for engine flame */
@@ -168,7 +168,7 @@ body {
   content: "";
   position: absolute;
   top: -80px;
-  left: 33px;
+  left: 22.5px;
   width: 5px;
   height: 80px;
   background: linear-gradient(to top, var(--orange), transparent);
@@ -178,7 +178,7 @@ body {
   content: "";
   position: absolute;
   top: -80px;
-  left: 33px;
+  left: 22.5px;
   width: 6px;
   height: 80px;
   background: linear-gradient(to top, var(--orange), transparent);
@@ -190,7 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   bottom: -15vh;
-  left: 190px;
+  left: 200px;
   color: #fff;
   padding: 2px;
   z-index: 2;
@@ -201,7 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   bottom: -15vh;
-  left: -385px;
+  left: -400px;
   color: #fff;
   padding: 2px;
   z-index: 2;
@@ -286,15 +286,15 @@ body {
 
 @keyframes animateAlienShip {
   0% {
-    transform: translateX(-2px) translateY(-20px);
+    transform: translateX(-2px) translateY(-15px);
   }
 
   50% {
-    transform: translateX(2px) translateY(20px);
+    transform: translateX(2px) translateY(15px);
   }
 
   100% {
-    transform: translateX(-2px) translateY(-20px);
+    transform: translateX(-2px) translateY(-15px);
   }
 }
 
