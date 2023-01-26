@@ -76,7 +76,42 @@ const createPlanets = () => {
   }
 };
 
+const createAstronaut = () => {
+  // Loop will run "count" number of times. Increase count to create more stars.
+  let count = 1;
+  let space = document.querySelector(".space");
+
+  // Create a new star element and append it to "space"
+  for (let i = 0; i < count; i++) {
+    // <i>: The Idiomatic Text element
+    let astronaut = document.createElement("i");
+    astronaut.classList.add("astro-box");
+
+    let { x, speed, height } = generateStarProperties();
+
+    astronaut.style.left = x + "px";
+
+    const astronautContent = `
+    <div class="astro-container">
+        <img class="astronaut" src="./astronaut-green.png" alt="">
+    </div>
+    
+    
+    `;
+
+    astronaut.innerHTML = astronautContent;
+
+    // Define how many seconds each animation takes to complete one cycle
+
+    astronaut.style.animationDuration = "45s";
+
+    space.appendChild(astronaut);
+    i++;
+  }
+};
+
 createStars();
+createAstronaut();
 createPlanets();
 
 document.addEventListener("keydown", function (event) {
@@ -91,4 +126,11 @@ document.addEventListener("keydown", function (event) {
       }
     }
   }
+});
+
+// Dark Mode Switch
+const darkModeEl = document.querySelector(".dark-mode-btn");
+darkModeEl.addEventListener("click", function () {
+  const space = document.querySelector(".space");
+  space.classList.toggle("dark-mode");
 });
