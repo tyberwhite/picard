@@ -74,7 +74,7 @@ body {
 }
 
 .player-ship {
-  animation: animateRocket 4s ease infinite;
+  animation: animateRocket 4s ease-in-out infinite;
 }
 
 /* animateRocket 0.3s ease infinite, */
@@ -158,8 +158,36 @@ body {
   z-index: 3;
 }
 
+.alien-ship {
+  animation: animateAlienShip 4s ease-in-out infinite;
+}
+
 .alien-ship-img {
   width: 70px;
+}
+
+/* Create pseduo element for engine flame */
+.alien-ship-flame::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 33px;
+  width: 5px;
+  height: 80px;
+  background: linear-gradient(to top, var(--orange), transparent);
+  /* animation: pulseColor 0.005s infinite; */
+  /* animation: pulse-red 2s infinite; */
+}
+
+.alien-ship-flame::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 33px;
+  width: 6px;
+  height: 80px;
+  background: linear-gradient(to top, var(--orange), transparent);
+  animation: alienPulseing 3s ease-in-out infinite;
 }
 
 .weapons-container {
@@ -258,6 +286,20 @@ body {
 
   100% {
     transform: translateX(-3px) translateY(-30px);
+  }
+}
+
+@keyframes animateAlienShip {
+  0% {
+    transform: translateX(-2px) translateY(-20px);
+  }
+
+  50% {
+    transform: translateX(2px) translateY(20px);
+  }
+
+  100% {
+    transform: translateX(-2px) translateY(-20px);
   }
 }
 
@@ -525,6 +567,23 @@ body {
   100% {
     filter: blur(9px);
     background: linear-gradient(var(--electricBlue), transparent);
+  }
+}
+
+@keyframes alienPulseing {
+  0% {
+    filter: blur(9px);
+    background: linear-gradient(var(--orange), transparent);
+  }
+
+  50% {
+    filter: blur(4px);
+    background: linear-gradient(#ce4c1c, transparent);
+  }
+
+  100% {
+    filter: blur(9px);
+    background: linear-gradient(var(--orange), transparent);
   }
 }
 
