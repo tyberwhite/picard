@@ -425,7 +425,7 @@ body {
 }
 
 /* Laser Beams */
-
+/* 
 .laser-beam {
   position: absolute;
   left: 50%;
@@ -483,7 +483,7 @@ body {
     -webkit-transform: rotate(-75deg);
     transform: rotate(-75deg);
   }
-}
+} */
 
 .blob.red {
   background: var(--electricBlue);
