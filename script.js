@@ -209,9 +209,29 @@ musicBtn.addEventListener("click", function () {
 //************** PHOTON CANON *********************//
 const photonCanonBtn = document.querySelector(".photon-canon-btn");
 const photonCanon = document.querySelector(".photon-canon");
+const photonSound = new Audio("./sounds/photon-canon.mp3");
 
 photonCanonBtn.addEventListener("click", function () {
-  photonCanon.classList.toggle("fire-photon-canon");
+  const photon = document.createElement("div");
+  photon.classList.add("fire-photon-canon");
+  photonCanon.appendChild(photon);
+
+  // play audio
+  photonSound.play();
+
+  // remove the photon after 500ms
+  setTimeout(function () {
+    photon.remove();
+  }, 3000);
 });
 
 //************** END PHOTON CANON *********************//
+
+//************** SCOTTY CATCH PHRASE *********************//
+const catchphraseBtn = document.querySelector(".catchphrase-btn");
+const catchphraseSound = new Audio("./sounds/losing-power.mp3");
+
+catchphraseBtn.addEventListener("click", function () {
+  catchphraseSound.play();
+});
+//************** END SCOTTY CATCH PHRASE *********************//
