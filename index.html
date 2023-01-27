@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Picard</title>
@@ -11,6 +15,13 @@
   <body>
     <div class="space">
       <div class="dark-mode-btn"></div>
+      <div class="alien-select-btn">
+        <span class="fa-solid fa-arrow-right" id="right-arrow"></span>
+      </div>
+      <div class="music-toggle-btn">
+        <span id="music-note">♫</span>
+        <audio id="music" src="outer-space-54040.mp3"></audio>
+      </div>
       <div class="alien-container">
         <div class="alien-ship">
           <img
@@ -40,7 +51,14 @@
       <div class="player-container">
         <div class="player-ship">
           <img class="rocket-img" src="enterprise.png" alt="" />
+          <div class="photon-canon"></div>
           <div class="phaser"></div>
+          <div class="tractor-beam tractor-beam-effect">
+            <audio
+              id="tractor-beam-sound"
+              src="./sounds/tractor-beam.mp3"
+            ></audio>
+          </div>
           <div class="first-flame"></div>
           <div class="second-flame"></div>
         </div>
@@ -48,7 +66,7 @@
         <div class="weapons-container">
           <div class="terminal">TERMINAL</div>
           <div class="stats-subcontainer">
-            <div class="weapon">
+            <div class="weapon photon-canon-btn">
               <span class="weapon-text">ATTACK</span>
             </div>
             <div class="weapon retreat">
@@ -56,6 +74,13 @@
             </div>
             <div class="weapon scan">
               <span class="weapon-text">SCAN</span>
+              <audio
+                id="scan-sound"
+                src="./sounds/mixkit-sci-fi-waves-scanner-907.wav"
+              ></audio>
+            </div>
+            <div class="weapon tractor-beam-btn">
+              <span class="weapon-text">TRACTOR</span>
             </div>
             <div class="weapon">
               <span class="weapon-text">QUIT</span>

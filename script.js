@@ -134,10 +134,84 @@ darkModeEl.addEventListener("click", function () {
   space.classList.toggle("dark-mode");
 });
 
-// Retreat
-const retreatBtn = document.querySelector(".scan");
-retreatBtn.addEventListener("click", function () {
+// Scan
+const scanBtn = document.querySelector(".scan");
+scanBtn.addEventListener("click", function () {
   const phaser = document.querySelector(".phaser");
   phaser.classList.toggle("laser-beam");
   phaser.classList.toggle("green");
+
+  const scanSound = document.getElementById("scan-sound");
+  if (scanSound.paused) {
+    scanSound.play();
+    scanSound.loop = true;
+  } else {
+    scanSound.pause();
+    scanSound.currentTime;
+  }
 });
+
+//************** TRACTOR BEAM EFFECTS *********************//
+const tractorBeamBtn = document.querySelector(".tractor-beam-btn");
+let tractorBeamSoundOn = false;
+
+tractorBeamBtn.addEventListener("click", function () {
+  const tractorBeam = document.querySelector(".tractor-beam");
+  tractorBeam.classList.toggle("tractor-beam-active");
+
+  const tractorBeamSound = document.getElementById("tractor-beam-sound");
+
+  if (tractorBeamSound.paused) {
+    tractorBeamSound.play();
+    tractorBeamSound.loop = true;
+  } else {
+    tractorBeamSound.pause();
+    tractorBeamSound.currentTime = 0;
+  }
+});
+
+// Tractor Beam Toggle
+const tractorBeamToggle = document.querySelector(".alien-select-btn");
+const tractorBeamEffect = document.querySelector(".tractor-beam-effect");
+let tractorBeamTarget = 0;
+
+tractorBeamToggle.addEventListener("click", function () {
+  const tractorBeamEffect = document.querySelector(".tractor-beam-effect");
+
+  if (tractorBeamTarget === 0) {
+    tractorBeamEffect.style.transform = "rotate(0deg)";
+    tractorBeamTarget++;
+  } else if (tractorBeamTarget === 1) {
+    tractorBeamEffect.style.transform = "rotate(14.5deg)";
+    tractorBeamTarget++;
+  } else {
+    tractorBeamEffect.style.transform = "rotate(-14.5deg)";
+    tractorBeamTarget = 0;
+  }
+});
+
+//************** END TRACTOR BEAM EFFECTS *********************//
+
+//************** MUSIC TOGGLE BUTTON *********************//
+const musicBtn = document.querySelector(".music-toggle-btn");
+const music = document.getElementById("music");
+
+musicBtn.addEventListener("click", function () {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+});
+
+//************** END MUSIC TOGGLE BUTTON *********************//
+
+//************** PHOTON CANON *********************//
+const photonCanonBtn = document.querySelector(".photon-canon-btn");
+const photonCanon = document.querySelector(".photon-canon");
+
+photonCanonBtn.addEventListener("click", function () {
+  photonCanon.classList.toggle("fire-photon-canon");
+});
+
+//************** END PHOTON CANON *********************//
